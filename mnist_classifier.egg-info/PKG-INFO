@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: mnist_classifier
+Version: 0.1
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: pytest

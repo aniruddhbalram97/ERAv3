@@ -1,0 +1,13 @@
+setup.py
+mnist_classifier.egg-info/PKG-INFO
+mnist_classifier.egg-info/SOURCES.txt
+mnist_classifier.egg-info/dependency_links.txt
+mnist_classifier.egg-info/requires.txt
+mnist_classifier.egg-info/top_level.txt
+model/__init__.py
+model/mnist_net.py
+tests/__init__.py
+tests/conftest.py
+tests/test_model.py
+train/__init__.py
+train/train_mnist.py
