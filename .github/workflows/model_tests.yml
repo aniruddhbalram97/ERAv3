@@ -2,9 +2,9 @@ name: Model Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ assignment_6 ]
   pull_request:
-    branches: [ main ]
+    branches: [ assignment_6 ]
 
 jobs:
   test:
