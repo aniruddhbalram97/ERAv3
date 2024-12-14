@@ -6,23 +6,23 @@ class MNISTNet(nn.Module):
         super(MNISTNet, self).__init__()
         
         # First convolutional block - reduced filters from 8 to 4
-        self.conv1 = nn.Conv2d(1, 16, kernel_size=3, padding=1)
-        self.bn1 = nn.BatchNorm2d(16)
+        self.conv1 = nn.Conv2d(1, 20, kernel_size=3, padding=1)
+        self.bn1 = nn.BatchNorm2d(20)
         self.pool1 = nn.MaxPool2d(2)
         
         # Second convolutional block - reduced filters from 16 to 8
-        self.conv2 = nn.Conv2d(16, 16, kernel_size=3, padding=1)
-        self.bn2 = nn.BatchNorm2d(16)
+        self.conv2 = nn.Conv2d(20, 20, kernel_size=3, padding=1)
+        self.bn2 = nn.BatchNorm2d(20)
         self.pool2 = nn.MaxPool2d(2)
         
         # Third convolutional block - reduced filters from 32 to 16
-        self.conv3 = nn.Conv2d(16, 16, kernel_size=3, padding=1)
+        self.conv3 = nn.Conv2d(20, 16, kernel_size=3, padding=1)
         self.bn3 = nn.BatchNorm2d(16)
         self.pool3 = nn.MaxPool2d(2)
         
         # Fully connected layers - reduced hidden layer from 128 to 64
         self.fc1 = nn.Linear(16 * 3 * 3, 64)
-        self.dropout = nn.Dropout(0.5)
+        self.dropout = nn.Dropout(0.1)
         self.fc2 = nn.Linear(64, 10)
 
     def forward(self, x):

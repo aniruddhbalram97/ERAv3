@@ -12,7 +12,7 @@ def train_model():
     # Hyperparameters
     num_epochs = 20
     batch_size = 64
-    learning_rate = 0.002
+    learning_rate = 0.0025
 
     # Enhanced data augmentation for training
     train_transform = transforms.Compose([
